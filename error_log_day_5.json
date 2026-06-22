@@ -1,0 +1,66 @@
+{
+  "status": "FAILED",
+  "day": 5,
+  "timestamp": "2026-06-22T20:23:53.399961",
+  "total_errors": 3,
+  "errors": [
+    {
+      "rule": "column_exists",
+      "column": "campaign_id",
+      "message": "Expected column 'campaign_id' is missing from the payload.",
+      "found_columns": [
+        "campaign_name",
+        "budget",
+        "impressions",
+        "clicks",
+        "date",
+        "id_campaign"
+      ]
+    },
+    {
+      "rule": "no_extra_columns",
+      "column": [
+        "id_campaign"
+      ],
+      "message": "Unexpected columns found (possible renames): {'id_campaign'}"
+    },
+    {
+      "rule": "correct_dtype",
+      "column": "budget",
+      "expected_dtype": "float64",
+      "actual_dtype": "object",
+      "sample_values": [
+        "$1,336.54",
+        "$3,922.81",
+        "$3,558.12"
+      ],
+      "message": "Column 'budget' expected dtype 'float64' but got 'object'."
+    }
+  ],
+  "broken_payload_sample": [
+    {
+      "campaign_name": "Summer Campaign 1",
+      "budget": "$1,336.54",
+      "impressions": 89528,
+      "clicks": 3856,
+      "date": "2024-06-18",
+      "id_campaign": "camp_1"
+    },
+    {
+      "campaign_name": "Summer Campaign 2",
+      "budget": "$3,922.81",
+      "impressions": 29454,
+      "clicks": 3750,
+      "date": "2024-06-18",
+      "id_campaign": "camp_2"
+    }
+  ],
+  "expected_schema": {
+    "campaign_id": "object",
+    "campaign_name": "object",
+    "budget": "float64",
+    "impressions": "int64",
+    "clicks": "int64",
+    "date": "object"
+  }
+}
