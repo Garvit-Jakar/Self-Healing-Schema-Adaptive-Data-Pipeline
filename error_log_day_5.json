@@ -1,7 +1,7 @@
 {
   "status": "FAILED",
   "day": 5,
-  "timestamp": "2026-06-22T20:23:53.399961",
+  "timestamp": "2026-06-23T19:04:46.103422",
   "total_errors": 3,
   "errors": [
     {
@@ -30,9 +30,9 @@
       "expected_dtype": "float64",
       "actual_dtype": "object",
       "sample_values": [
-        "$1,336.54",
-        "$3,922.81",
-        "$3,558.12"
+        "$2,139.95",
+        "$4,088.06",
+        "$2,649.34"
       ],
       "message": "Column 'budget' expected dtype 'float64' but got 'object'."
     }
@@ -40,18 +40,18 @@
   "broken_payload_sample": [
     {
       "campaign_name": "Summer Campaign 1",
-      "budget": "$1,336.54",
-      "impressions": 89528,
-      "clicks": 3856,
-      "date": "2024-06-18",
+      "budget": "$2,139.95",
+      "impressions": 75092,
+      "clicks": 2031,
+      "date": "2026-06-24",
       "id_campaign": "camp_1"
     },
     {
       "campaign_name": "Summer Campaign 2",
-      "budget": "$3,922.81",
-      "impressions": 29454,
-      "clicks": 3750,
-      "date": "2024-06-18",
+      "budget": "$4,088.06",
+      "impressions": 23511,
+      "clicks": 1723,
+      "date": "2026-06-24",
       "id_campaign": "camp_2"
     }
   ],

@@ -52,7 +52,6 @@ Generate the patch_function and explanation now.
 """
 
     try:
-
         response = client.models.generate_content(
             model="gemini-2.5-flash",
             contents=user_message,
